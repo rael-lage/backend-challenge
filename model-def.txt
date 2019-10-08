@@ -1,0 +1,39 @@
+node_modules/.bin/sequelize model:generate --name Client --attributes id:UUID
+
+Client
+id
+
+node_modules/.bin/sequelize model:generate --name Buyer --attributes id:UUID,name:string,email:string,cpf:string
+
+Buyer
+id
+name
+email
+cpf
+
+node_modules/.bin/sequelize model:generate --name Payment --attributes id:UUID,amount:float,type:string
+
+
+Payment
+id
+amount
+type
+id_client
+id_buyer
+id_card
+id_boleto
+
+node_modules/.bin/sequelize model:generate --name Card --attributes id:UUID,holderName:string,number:integer,expirationDate:date,ccv:integer
+
+Card
+id
+holderName
+number
+expirationDate
+ccv
+
+node_modules/.bin/sequelize model:generate --name Boleto --attributes id:UUID,number:integer
+
+Boleto
+id
+number
